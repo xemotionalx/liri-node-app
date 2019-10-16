@@ -1,7 +1,7 @@
 require("dotenv").config();
 var axios = require("axios");
 var Spotify = require("node-spotify-api");
-var momentJS = require("moment");
+var moment = require("moment");
 var fs = require("fs");
 
 var keys = require("./keys.js");
@@ -75,14 +75,14 @@ function getConcert() {
             function(response) {
                 console.log("Name of Venue: " + response.data[0].venue.name);
                 console.log("Location: " + response.data[0].venue.city + ", " + response.data[0].venue.country);
-                console.log("Date: " + moment(response.data[0].datetime).format(MM / DD / YYY));
+                console.log("Date: " + moment(response.data[0].datetime).format("MM/DD/YY"));
             })
         .catch(function(error) {
-            axiosErr();
+            axiosErr(error);
         });
 };
 
-function axiosErr() {
+function axiosErr(error) {
     if (error.response) {
         console.log("---------------Data---------------");
         console.log(error.response.data);

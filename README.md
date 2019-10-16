@@ -20,12 +20,19 @@ In order to use Liri, you must first run "npm i" to install the following packag
     * allows Liri to access external txt files
 
 Liri takes in the following commands:
+[spotify-this-song-example](/images/get-song.png)
 * **spotify-this-song** + song title
     * returns the Artist, Song Name, Album and Spotify link of the song requested
+
+[concert-this-example](/images/get-concert.png)
 * **concert-this** + musical artist
     * returns the venue, location and date of the next concert of the artist requested
+
+[movie-this-example](/images/get-movie.png)
 * **movie-this** + movie
     * returns the title, release year, rating, country produced, language, plot and actors for the movie requested
+
+[do-what-it-says-example](/images/do-what-it-says.png)
 * **do-what-it-says**
     * returns a random search pulled from the random.txt file
 
